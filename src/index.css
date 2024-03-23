@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.switch label {
+	margin-top: 5px;
+	cursor: pointer;
+	width: 55px;
+	height: 23px;
+	background-color: #999;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.switch input[type="checkbox"] {
+	visibility: hidden;
+}
+
+.switch label:after {
+	content: "";
+	width: 19px;
+	height: 19px;
+	position: absolute;
+	top: 2px;
+	left: 1px;
+	transition: 100ms;
+	background-color: white;
+}
+
+.switch .look:checked + label:after {
+	left: 34px;
+}
+
+.switch .look:checked + label {
+	background-color: rgb(12 74 110);
+}
+
+input[type="range"] {
+	margin: 0.75rem;
+	-webkit-appearance: none;
+	width: 85%;
+	height: 5px;
+	background: #353221;
+	outline: none;
+
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 15px;
+	height: 30px;
+	background: rgb(12 74 110);
+	cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	background: rgb(12 74 110);
+	cursor: pointer;
+}
+
+/** FF*/
+input[type="range"]::-moz-range-progress {
+	background-color: #43e5f7;
+}
+input[type="range"]::-moz-range-track {
+	background-color: #9a905d;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+	background-color: #43e5f7;
+}
+input[type="range"]::-ms-fill-upper {
+	background-color: #9a905d;
+}
+
+@layer components {
+	.drum-pad {
+		@apply bg-neutral-500 shadow-md text-black border-b-4 border-slate-400
+    rounded font-semibold cursor-pointer grid place-items-center
+    py-7 px-9 active:bg-yellow-500 active:translate-y-1 active:border-b-0 active:mb-1 text-2xl font-bold;
+	}
+}
