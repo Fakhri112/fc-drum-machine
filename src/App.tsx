@@ -78,8 +78,8 @@ function App() {
 				<div>
 					<div
 						id="drum-machine"
-						className="p-3 rounded-md flex flex-col items-center gap-2 w-[22em] 
-        					w-[40em] border-b-8 border-neutral-400 bg-neutral-300">
+						className="p-3 rounded-md flex flex-col items-center gap-2 w-[21em] 
+        					h-[27em] border-b-8 border-neutral-400 bg-neutral-300">
 						<div className="w-full font-light text-center">The Drum Pad</div>
 						<div className="w-full flex flex-col items-center gap-4">
 							<div
